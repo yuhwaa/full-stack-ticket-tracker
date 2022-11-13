@@ -8,22 +8,22 @@
 </head>
 
 <body>
-    <section class="todo-container">
-        <h2>To Do List</h2>
+    <section class="container">
+        <h1>Ticket Tracker</h1>
         <section class="jumbotron">
             <h3>Add New Issue:</h3>
-            <form id="issueInputForm">
+            <form id="issueInputForm" method="POST" action="/new">
                 <div class="form-group">
-                    <label for="issueSubjInput">Subject</label>
-                    <input type="text" class="form-control" id="issueSubjInput" placeholder="Issue Subject...">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Issue Subject...">
                 </div>
                 <div class="form-group">
-                    <label for="issueDescInput">Description</label>
-                    <input type="text" class="form-control" id="issueDescInput" placeholder="Issue Description...">
+                    <label for="description">Description</label>
+                    <input type="text" class="form-control" name="description" id="description" placeholder="Issue Description...">
                 </div>
                 <div class="form-group">
-                    <label for="issueSeverityInput">Severity</label>
-                    <select class="form-control" id="issueSeverityInput">
+                    <label for="severity">Severity</label>
+                    <select class="form-control" name="severity" id="severity">
                         <option value="Low">Low</option>
                         <option value="Medium">Medium</option>
                         <option value="High" selected>High</option>
@@ -31,7 +31,7 @@
                 </div>
                 <div class="form-group">
                     <label for="issueAssignedToInput">Assigned To</label>
-                    <input type="text" class="form-control" id="issueAssignedToInput" placeholder="Enter Person Responsible...">
+                    <input type="text" class="form-control" id="assignedTo" name="assignedTo" placeholder="Enter Person Responsible...">
                 </div>
                 <button type="submit" class="btn btn-warning">Add</button>
             </form>
