@@ -36,5 +36,23 @@
                 <button type="submit" class="btn btn-warning">Add</button>
             </form>
         </section>
+        <section class="row">
+            <div class="col-lg-12">
+                <div id="issuesList">
+                    <!--This will be populated by JS-->
+                    <% ticketList.forEach( tickets => { %>
+                        <div class = "well">
+                            <h6>Issue ID: <%=tickets._id%></h6>
+                            <p><span class="label <%=tickets.status == 'Closed'? 'label-success': 'label-info'%>"></span></p>
+                            <h3><%=tickets.subject%></h3>
+                            <p><%=tickets.description%></p>
+                            <p><span class="glyphicon glyphicon-time"></span><%=tickets.serverity%><span class="glyphicon glyphicon-user"></span><%=tickets.assignedTo%></p>
+                            <a href="/edit/<%=ticket._id%>" class="btn btn-warning">Close</p>
+                            <a href="/edit/remove/<%=tickets._id%>" class="btn btn-danger">Delete</p>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </section>
     </section>
 </body>

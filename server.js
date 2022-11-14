@@ -14,7 +14,7 @@ const homeRoutes = require("./routes/home")
 const editRoutes = require("./routes/edit")
 require('dotenv').config({path: './config/.env'})
 
-connectDB()
+connectDB();
 
 //Set Middleware
 app.set("view engine", "ejs");
