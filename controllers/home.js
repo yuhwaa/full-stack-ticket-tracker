@@ -15,7 +15,7 @@ module.exports = {
             {
                 subject: req.body.subject,
                 description: req.body.description,
-                serverity: req.body.severity,
+                severity: req.body.severity,
                 assignedTo: req.body.assignedTo,
                 status: req.body.status
             });
